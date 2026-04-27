@@ -1,1 +1,0 @@
-Halo Sandika Yusuf
