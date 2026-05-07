@@ -1,23 +1,25 @@
-// Pesan selamat datang
-alert("Selamat datang di Portofolio Fauzan!");
+// Fungsi untuk menghasilkan warna acak
+       function generateRandomColor() {
+           var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+           return randomColor;
+       }
 
-// Array warna background
-const colors = [
-    "#f4f4f4",
-    "#dff9fb",
-    "#c7ecee",
-    "#f6e58d",
-    "#ffbe76",
-    "#badc58",
-    "#e056fd",
-    "#7ed6df"
-];
+       // Mengubah warna latar belakang halaman secara acak
+       function changeBackgroundColor() {
+           document.body.style.backgroundColor = generateRandomColor();
+       }
 
-// Pilih warna secara acak
-const randomColor = colors[Math.floor(Math.random() * colors.length)];
+       // Memanggil fungsi changeBackgroundColor saat halaman dimuat ulang
+       window.onload = function() {
+           changeBackgroundColor();
+       };
 
-// Tambahkan efek transisi
-document.body.style.transition = "background-color 1s ease";
+       // Menampilkan pesan sambutan
+    function showWelcomeMessage() {
+        alert("Selamat datang di portofolio saya! Saya adalah seorang pengembang web yang penuh semangat.");
+    }
 
-// Ubah background body
-document.body.style.backgroundColor = randomColor;
+    window.onload = function() {
+        changeBackgroundColor();
+        showWelcomeMessage(); // Panggil fungsi pesan sambutan
+    };
